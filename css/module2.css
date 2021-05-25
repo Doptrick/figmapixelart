@@ -1,0 +1,38 @@
+/* Introduction Section Css */
+.m2-intro{
+    background: url("../img/TryPokemon.jpg") no-repeat left;
+    background-size: cover;
+    height: 50vh;
+    position: relative;
+    z-index: -1;
+}
+
+@media(max-width:600px) {
+    .m2-intro h2{
+        font-size: 10vw;
+    }
+    .m2-intro p{
+        font-size: 15vw;
+        position: absolute;
+        bottom: -4.5vw;
+        left: 25%;
+        margin: 0;
+        color: var(--section-color);
+    } 
+
+}
+@media(min-width:601px) {
+    .m2-intro h2{
+    font-size: 4vw;
+    padding: 3vw;
+}
+   .m2-intro p{
+    font-size: 10vw;
+    position: absolute;
+    bottom: -3vw;
+    left: 35%;
+    margin: 0;
+    color: var(--section-color);
+} 
+}
+

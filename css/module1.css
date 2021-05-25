@@ -1,0 +1,112 @@
+/* Introduction Section Css */
+.m1-intro{
+    background: url("../img/pikachu.jpg") no-repeat left;
+    background-size: cover;
+    height: 50vh;
+    position: relative;
+    z-index: -1;
+}
+@media(max-width:600px) {
+    .m1-intro h2{
+        font-size: 10vw;
+    }
+    .m1-intro p{
+        font-size: 15vw;
+        position: absolute;
+        bottom: -4.5vw;
+        left: 25%;
+        margin: 0;
+        color: var(--section-color);
+    } 
+
+}
+@media(min-width:601px) {
+    .m1-intro h2{
+    font-size: 4vw;
+    padding: 3vw;
+}
+   .m1-intro p{
+    font-size: 10vw;
+    position: absolute;
+    bottom: -3vw;
+    left: 35%;
+    margin: 0;
+    color: var(--section-color);
+} 
+}
+
+
+@media(max-width:600px) {
+    .requisite h2{
+        font-size: 10vw;
+    }
+}
+@media(min-width:601px) {
+    .requisite h2{
+        font-size: 5vw;
+        text-align: left;
+        max-width: 1200px;
+        margin: 2rem auto;
+    }
+}
+.requisite .gallery{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: clamp(300px, 100%, 1200px);
+    margin: auto;
+    color: var(--text-color);
+}
+.requisite .gallery div{
+    width: clamp(300px, 30%, 500px);
+}
+.requisite .gallery h3{
+    font-size: 2rem;
+}
+.requisite .gallery p{
+    text-align: left;
+    line-height: 1.6;
+    word-spacing: 5px;
+    font-size: 1.8rem;
+}
+article{
+    background: var(--section-color);
+}
+article section{
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   width: clamp(300px, 98%, 1200px);
+   margin: auto;
+   z-index: 1;
+}
+article img{
+    width: 48%;
+    height: auto;
+}
+article div{
+    width: 48%;
+}
+article h3{
+    font-size: calc((4) * 1.2vh + 1rem);
+    text-align: center;
+    color: var(--text-color);
+}
+article p{
+    color: var(--text-color);
+    text-align: left;
+    line-height: 1.6;
+    word-spacing: 5px;
+    font-size: 1.8rem;
+}
+
+.paggination h4{
+    font-size: 10rem;
+    color: var(--text-color);
+}
+.paggination div{
+    display: flex;
+    justify-content: space-between;
+    width: clamp(300px, 98%, 900px);
+    margin: auto;
+}

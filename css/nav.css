@@ -1,0 +1,147 @@
+
+/* NAVIGATION  CSS */
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--nav-background);
+}
+
+header nav {
+    width: clamp(301px, 100%, 1200px);
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  header nav .logo {
+    width: clamp(100px,200px,200px);
+    padding: 0 1rem;
+  }
+  header h1{
+    margin: 0;
+    padding: 1rem 0;
+  }
+
+/*           Desktop   NAV              */
+@media (min-width: 601px) {
+    
+  .hidden {
+    display: none;
+  }
+    header nav ul {
+      width: clamp(300px, 600px, 1100px);
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+    }
+    header nav ul li {
+      font-size: 1.8rem;
+      padding: 1.8rem 0;
+    }
+    header nav ul a {
+      color: var(--text-color);
+      font-family: "Roboto", sans-serif;
+      font-weight: bold;
+    }
+    header nav ul a:hover {
+      animation: bordercolorchange 10s infinite ease-in-out;
+    }
+    
+    
+  }
+
+  /*           Mobile   NAV              */
+  @media (max-width: 600px) {
+
+    header nav .toggle-icon {
+      position: relative;
+      padding: 1rem;
+      -webkit-transition: margin 600ms;
+      transition: margin 600ms;
+      cursor: pointer;
+    }
+    header nav .toggle-icon .bar {
+      display: block;
+      width: 3.8em;
+      height: 0.2em;
+      margin: 0.9em;
+      border-right: 2.8em solid #fff;
+      border-left: 0.6em solid #d6d6d6;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-transition-property: -webkit-transform, margin, border-right-color, box-shadow;
+      -webkit-transition-property: margin, border-right-color, -webkit-transform, -webkit-box-shadow;
+      transition-property: margin, border-right-color, -webkit-transform, -webkit-box-shadow;
+      transition-property: transform, margin, border-right-color, box-shadow;
+      transition-property: transform, margin, border-right-color, box-shadow, -webkit-transform, -webkit-box-shadow;
+      -webkit-transition-duration: 600ms;
+      transition-duration: 600ms;
+    }
+    header nav .toggle-icon .bar:nth-of-type(1) {
+      -webkit-transition: opacity 300ms;
+      transition: opacity 300ms;
+    }
+    header nav .toggle-icon .bar:nth-of-type(2) {
+      -webkit-transform: rotate(-180deg);
+      transform: rotate(-180deg);
+    }
+    header nav .pushed .toggle-icon {
+      margin: -3.2em 0 0 0.7em;
+    }
+    header nav .pushed .bar:nth-of-type(1) {
+      opacity: 0;
+    }
+    header nav .pushed .bar:nth-of-type(2) {
+      margin-left: 1.4em;
+      -webkit-transform: rotate(-137deg) translateY(-1.5em);
+      transform: rotate(-137deg) translateY(-1.5em);
+    }
+    header nav .pushed .bar:nth-of-type(3) {
+      margin-left: 0.5em;
+      -webkit-transform: rotate(-42deg);
+      transform: rotate(-42deg);
+    }
+    header nav .pushed .toggle-icon:hover .bar:nth-of-type(2) {
+      border-right-color: #e9b8b9;
+      -webkit-box-shadow: 0.4em 0 0.6em 0.1em rgba(205, 40, 44, 0.75);
+      box-shadow: 0.4em 0 0.6em 0.1em rgba(205, 40, 44, 0.75);
+    }
+    header nav .pushed .toggle-icon:hover .bar:nth-of-type(3) {
+      border-right-color: #ddf1da;
+      -webkit-box-shadow: 0.4em 0 0.6em 0.1em rgba(83, 228, 68, 0.65);
+      box-shadow: 0.4em 0 0.6em 0.1em rgba(83, 228, 68, 0.65);
+    }
+    header nav .show {
+      position: absolute;
+      background-color: #21af68;
+      line-height: 2;
+      margin: 2rem auto;
+      padding: 1rem 0 1rem 2rem;
+      height: 90vh;
+      width: 70%;
+      top: 5rem;
+      left: 0;
+      z-index: 1;
+      overflow: hidden;
+      opacity: 100%;
+      -webkit-transition-duration: 1s;
+              transition-duration: 1s;
+    }
+    header nav .show a {
+      color: whitesmoke;
+      font-family: "Roboto", sans-serif;
+      font-weight: bold;
+      font-size: 4rem;
+    }
+    header nav .hide {
+      display: none;
+      opacity: 0%;
+    }
+  }
